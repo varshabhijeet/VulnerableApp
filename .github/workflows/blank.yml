@@ -19,7 +19,7 @@ jobs:
         pwd
         ls
         ls -ltr
-        gitleaks --path=. --config-path=gitleaks-back.toml --report=scan.json --leaks-exit-code=0
+        gitleaks --path=. --config-path=VulnerableApp/VulnerableApp/gitleaks-back.toml --report=scan.json --leaks-exit-code=0
        
         curl --location --request POST 'http://3.16.182.240:8080/api/v2/import-scan/' --header 'Authorization: Token 37c4b430210547f2a535f171036396ca6e72aba8' --form 'engagement=19' --form 'verified=true' --form 'active=true' --form 'scan_type=Gitleaks Scan' --form 'file=@scan.json'
       shell: bash
