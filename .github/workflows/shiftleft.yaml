@@ -11,7 +11,7 @@ on:
     - main
     - master
 jobs:
-  NG SAST-Build:
+  shiftleft:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
